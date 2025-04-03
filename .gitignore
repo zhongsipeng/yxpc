@@ -1,0 +1,50 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Flask secret keys and configurations
+instance/
+file/
+*.env
+.env
+.env.local
+.env.*.local
+.flaskenv
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+
+# Python packaging and build artifacts
+dist/
+build/
+deps/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+
+# Testing and coverage
+.coverage
+htmlcov/
+.pytest_cache/
+test-reports/
+
+# macOS files
+.DS_Store
+
+# Windows files
+Thumbs.db

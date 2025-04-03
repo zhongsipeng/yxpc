@@ -1,0 +1,70 @@
+tags:
+  - 游戏管理
+summary: 获取游戏列表
+description: 根据条件分页查询游戏列表
+parameters:
+  - in: query
+    name: page
+    schema:
+      type: integer
+      example: 1
+    description: 当前页码
+  - in: query
+    name: rows
+    schema:
+      type: integer
+      example: 10
+    description: 每页条数
+  - in: query
+    name: yxm
+    schema:
+      type: string
+      example: "游戏名"
+    description: 游戏名称模糊搜索
+  - in: query
+    name: yxlx
+    schema:
+      type: string
+      example: "RPG"
+    description: 游戏类型（RPG/ACT/SLG等）
+  - in: query
+    name: flbq
+    schema:
+      type: string
+      example: "分类标签"
+    description: 分类标签筛选
+  - in: query
+    name: fsrq
+    schema:
+      type: string
+      example: "2022-02-28,2025-04-15"
+    description: 发售日期范围（开始日期,结束日期）
+responses:
+  200:
+    description: '查询成功{"aa": "bb"}'
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            total:
+              type: integer
+              example: 100
+            data:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  name:
+                    type: string
+                    example: "示例游戏"
+                  type:
+                    type: string
+                    example: "RPG"
+                  release_date:
+                    type: string
+                    format: date
+                    example: "2023-01-01"

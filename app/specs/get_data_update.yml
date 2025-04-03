@@ -1,0 +1,17 @@
+tags:
+  - 用户
+parameters:
+  - name: user_id
+    in: path
+    type: integer
+    required: true
+responses:
+  200:
+    description: 用户信息
+    schema:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
